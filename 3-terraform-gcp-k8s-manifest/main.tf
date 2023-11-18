@@ -18,6 +18,7 @@ module "gke-cluster" {
       disk_size_gb = 50
     }
   sandbox_id = var.sandbox_id
+  depends_on = [ module.project ]
 }
 
 resource "kubectl_manifest" "test" {
